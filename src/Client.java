@@ -9,21 +9,7 @@ public class Client {
         Socket socket = new Socket("4.tcp.ngrok.io", 11591);
         System.out.println(socket.getPort());
         System.out.println("Conexión aceptada: "+socket.getInetAddress().getHostName());
-        //Dirección de loopback -> 127.0.0.1
-        //localhost
-        //192.168.130.37
-
-        /*
-        //4. Cliente envia mensaje
-        String mensaje = "Universidad Icesi";
-        socket.getOutputStream().write(mensaje.getBytes("UTF-8"));
-
-        //7. Cliente recibe
-        byte[] buffer = new byte[300];
-        socket.getInputStream().read(buffer);
-        String received = new String(buffer);
-        System.out.println(received);
-        */
+        
 
         new Thread(()->{
             while(true){
@@ -43,4 +29,9 @@ public class Client {
         }
 
     }
+
+    public void alfa(){
+        print("Emparejamiento");
+    }
+
 }
